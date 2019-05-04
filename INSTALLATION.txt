@@ -1,0 +1,39 @@
+1) DOWNLOAD FROM MONGODB.COM
+
+2) INSTALL IT BY USING CUTOM OPTION.
+
+3) CREATE NEW FOLDER CALLED MONGODB IN C DRIVE ROOT PATH FROM FOLDER    CREATION.
+
+4) NOW CREATE TO FOLDERS IN BIN FOLDER NAMED DATA AND LOG.
+
+5) OPEN COMMAND PROMPT FROM    RUN AS ADMINISTRATOR.
+
+6) GO TO C DRIVE THROUGH CD..
+
+7) THAN GO TO BIN FOLDER THROUGH CD
+
+8) NOW EXECUTE ONE COMMAND
+   --dbpath c:\MongoDB\bin\data\db --logpath c:\MongoDB\bin\log   \mongo.log --directoryperdb --install
+
+9) FOR START SERVICE WRITE ONE COMMAND CALLED
+   net start MongoDB
+
+10) THAN TYPE mongo
+
+11) CLEAR SCREEN BY USING cls
+
+12) SHOW ALL DATABASE BY USING show dbs
+
+13) CREATE TABLE BY USING 
+    use DATABASENAME
+
+14) THAN TYPE db
+
+15) CREATE NEW USER BY USING
+    db.createUser({
+		  	user:"Sky9",
+			pwd:"1234",
+			roles:["readWrite","dbadmin"]
+		  });
+16) CREATE NEW COLLECTION
+    db.createCollection('customers');

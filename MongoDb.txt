@@ -1,0 +1,37 @@
+
+Note: using reverse camel casing
+	then first letter in lowercase n then first letter in upper
+
+use nameOfDataBase
+
+db.createCollection('studentmaster'); --- create collections
+	{"ok":1}
+
+db.studentmaster.insert({firstname:"Pal",lastname:"Vasara",email:"wgewqwe@gmail.com"},contact_no:2354647);   ---- creates record
+
+db.studentmaster.find();  --- show all data in random way
+	{"_id" : ObjextId("ef345dfs"),"firstname":"Pal","lastname":"Vasara"}
+
+db.studentmaster.find().pretty();  ---- show all data in BSON format
+ 
+db.studentmaster.find({firstname:"Pal"}).pretty();  --- shows the record satisfied the condition given
+
+db.studentmaster.find({age:{$lt:28}}).pretty();  --- shows the record having age less than 28
+
+db.studentmaster.insert([{firstname:"fdhfyh",lastname:"refdwf",add:{soc:"bfgvd",home:"fdeds"},membership:["m1","m2"]},{firstname:"vfvdse"}]);
+
+db.studentmaster.update({firstname:"Pal"},{$set:{gender:"female"}});  --- will add gender in column in having firstname='Pal'
+ 
+db.studentmaster.update({firstname:"Pal"},{firstname:"Palak",lastname:"Vasara",gender:"female"}); --- will update new record instead old having firstname='Pal'
+
+
+db.studentmaster.update({},{$rename:{"firstname":"fullname"}});
+
+db.studentmaster.remove({firstname:"yogita"});
+
+
+db.studentmaster.find().forEach(function (doc){print("first name: "+doc.firstname)});
+
+
+
+
